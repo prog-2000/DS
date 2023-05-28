@@ -1,0 +1,25 @@
+1. Run the IDL-to-Java compiler idlj, on the IDL file to create stubs and skeletons. Thisstep assumes that you have included the path to the java/bin directory in your path.
+	
+	command: idlj -fall ReverseModule.idl
+
+2. Compile all java files 
+	(command to compile all java files at one time:
+	
+	 javac *.java ReverseModule/*.java)
+
+3. Start orbd. To start orbd from a UNIX command shell, enter :
+	
+	command: orbd -ORBInitialPort 1050&
+
+4. On new terminal
+	Start the server. To start the server from a UNIX command shell, enter :
+	
+	command: java ReverseServer -ORBInitialPort 1050& -ORBInitialHost localhost&
+
+5. On new terminal
+	Run the client application :
+	command: java ReverseClient -ORBInitialPort 1050 -ORBInitialHost localhost
+
+
+
+
