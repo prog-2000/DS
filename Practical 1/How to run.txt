@@ -1,0 +1,15 @@
+1. Create all java files and compile
+
+2. run "rmic AddServerImpl" in compiler it will generate AddServerImpl_Stub.class file.
+
+3. Start the RMI Registry on the Server Machine using "rmiregistry"
+
+4. In new terminal start the Server using "java AddServer"
+
+5. In another new terminal start the Client 
+
+* java AddClient 127.0.0.1 8 9
+   for localhost (when client and server on same machine)
+
+* java AddClient 172.16.86.80 8 9 
+   (when client and server on different machine, specify IP address of server machine)
